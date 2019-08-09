@@ -5,7 +5,7 @@ require_once 'Huxley-php/Huxley.php';
 <html>
 <head>
     <meta charset="utf-8" />
-    <title></title>
+    <title>Arrivals at Glynde</title>
 </head>
 <body>
 <?php
@@ -17,6 +17,7 @@ $access_token = "e142346d-3e38-465e-94e6-29fb84d8baa3";
 $id = "GLY";
 
 try {
+	echo 'Glynde Arrivals';
     $api_client = new Huxley\APIClient('https://remus-rail.azurewebsites.net');
     $arrivals_api = new Huxley\ArrivalsAPI($api_client);
     $response = $arrivals_api->getArrivalsBoard($access_token, $id);
